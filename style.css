@@ -1,0 +1,244 @@
+html{
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Pozadí a určení fontu*/
+body{
+    font-family: "Roboto", sans-serif, Verdana;
+    background-color: #fcfafa;
+    background-image: url(img/milad-fakurian-3hIaqX3VuXE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Navbar kod*/
+.navbar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-size: 1.2em;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.navbar ul{
+    width: 100%;
+    height: 110px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 30px;
+}
+
+.navbar li{
+    height: 40px;
+}
+
+.navbar a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: color 0.8s; 
+}
+
+.navbar a:hover{
+    color: rgb(16, 121, 219);
+}
+
+.navbar h1{
+    position: absolute; 
+    left: 20px; 
+    color: white;
+   
+}
+
+/*Uvodní texty pro kazdou stranku*/
+.uvod{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.uvod-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 800px;
+    padding: 30px;
+    
+}
+
+.uvod-text h1{
+    margin-bottom: 20px;
+    font-size: 4em;
+}
+
+.uvod-text p{
+    font-size: 1.15em;
+    
+}
+
+.projekty-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-bottom: 20%;
+    padding: 30px;
+    row-gap: 30px;
+    column-gap: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/*Všechno davam do divu a flexu protoze se mi to pouzivá nejlíp*/
+.projekty{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    background-color: rgb(48, 47, 47);
+    border-radius: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+.projekty h4{
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.projekty p{
+    font-size: 1.3em;
+}
+
+/*Hover protože to vypadá líp*/
+.projekty:hover{
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+
+}
+
+/*Desing pro kontakty*/
+.kontakty-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    height: 400px;
+    margin-bottom: 10%;
+    padding: 30px;
+    row-gap: 20px;
+}
+
+.kontakty{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    color: white;
+    padding: 30px;
+}
+
+/*Kontakt ikony*/
+.obrazky{
+    height: 50px;
+    width: 50px;
+}
+
+/*Design footeru*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #222;
+    color: white;
+    border-top: 1px solid white;
+    margin-top: auto;
+}
+
+/*označení pro aktuální stránku*/
+#uvod-tag{
+    color: rgb(0, 140, 255);
+}
+
+#projekty-tag{
+    color: rgb(0, 140, 255);
+}
+
+#kontakty-tag{
+    color: rgb(0, 140, 255);
+}
+
+#omne-tag{
+    color: rgb(0, 140, 255); 
+}
+
+
+  /*Media pro responzivitu*/
+@media(max-width: 950px){
+
+    .navbar {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 50px;
+        border: 1px solid white;
+    }
+
+    .navbar h1 {
+        position: static; 
+        margin-bottom: 70px; 
+        align-self: center;
+    }
+
+    .navbar ul {
+        flex-direction: column-reverse; 
+        gap: 40px;
+        height: 140px;
+    }
+
+    .uvod-text{
+        align-items: center;
+        text-align: center;
+    }
+
+}
+
+
